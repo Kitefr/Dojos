@@ -13,10 +13,23 @@
 
  Astuce: Savoir si un nombre est multiple peut s'écrire avec le symbole Modulo noté "%"
  */
-function FizzBuzz(nombre){
-    // your code here
+function FizzBuzz(nombre) {
+  if (isNaN(nombre)) {
+    return null;
+  }
 
-    return 2;
+  const multipleOf3 = nombre % 3 == 0;
+  const multipleOf5 = nombre % 5 == 0;
+
+  if (multipleOf3 && multipleOf5) {
+    return "FizzBuzz";
+  } else if (multipleOf5) {
+    return "Buzz";
+  } else if (multipleOf3) {
+    return "Fizz";
+  }
+
+  return nombre;
 }
 
-module.exports = FizzBuzz
+module.exports = FizzBuzz;

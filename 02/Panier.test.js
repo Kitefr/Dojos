@@ -1,13 +1,14 @@
 const checkout = require("./Panier.js");
-const assert = require("chai").assert; // Librarie Chai : http://chaijs.com/guide/installation/
+const assert = require("chai").assert;
+const expect = require("chai").expect;
 
 /**
  * All Suite Test
  */
-describe("Suite test in Panier Dojo", () => {
+describe("Test Dojo 02", () => {
   it("test si le panier est bon", done => {
     let articles = checkout();
-    assert.equal(articles.length, 5);
+    assert.equal(articles.length, 4);
     done();
   });
 });

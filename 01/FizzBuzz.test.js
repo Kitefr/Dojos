@@ -1,49 +1,31 @@
-/** 
- * Ce dojo utilise la librarie Chai pour les tests unitaires (TDD)
- * Avec l'environnement Mocha
-*/
-
-
-const FizzBuzz = require('./FizzBuzz.js');
-const assert = require('chai').assert // Librarie Chai : http://chaijs.com/guide/installation/
-
-
+const FizzBuzz = require("./FizzBuzz.js");
+const expect = require("chai").expect;
 
 /**
  * All Suite Test
  */
-describe('Suite test in FizzBuzz Dojo', () => {
+describe("Test Dojo 01", () => {
+  it("should be a function", () => {
+    expect(FizzBuzz).to.be.a("function");
+  });
 
-    it('test si mutiple de 3', (done) => {
-        assert.equal(FizzBuzz(9), 2); 
-        assert.equal(FizzBuzz(12), 2); 
-        done();
-    });
-    
-    it('test si mutiple de 5', (done) => {
-        assert.equal(FizzBuzz(10), 2); 
-        assert.equal(FizzBuzz(20), 2); 
+  it("should have an argument which is a number", () => {
+    expect(FizzBuzz("aea")).to.be.null;
+  });
 
-        done();
-    });
+  it("should be a multiple of 3", () => {
+    expect(FizzBuzz(12)).to.be.equal("Fizz");
+  });
 
-    it('test si mutiple de 3 et de 5', (done) => {
-        assert.equal(FizzBuzz(15), 2); 
-        assert.equal(FizzBuzz(30), 2); 
+  it("should be a multiple of 5", () => {
+    expect(FizzBuzz(5)).to.be.equal("Buzz");
+  });
 
-        done();
-    });
+  it("should be a multiple of 3 and 5", () => {
+    expect(FizzBuzz(15)).to.be.equal("FizzBuzz");
+  });
 
-    it('test si ni mutiple de 3 ni de 5', (done) => {
-        assert.equal(FizzBuzz(8), 2); 
-        assert.equal(FizzBuzz(7), 2); 
-
-        done();
-    });
-
-    it("test si ce n'est pas un nombre ", (done) => {
-        assert.equal(FizzBuzz("Hello World !"), 2); 
-        done();
-    });
-
+  it("should NOT be a multiple of 3 and 5", () => {
+    expect(FizzBuzz(4)).to.be.equal(4);
+  });
 });
