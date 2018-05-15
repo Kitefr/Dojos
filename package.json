@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Wild Code School Dojo on Algorithms",
   "scripts": {
-    "tests": "mocha **/*.test.js --reporter dot"
+    "test": "mocha **/*.test.js --reporter dot"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,6 @@
   "homepage": "https://github.com/Kitefr/Dojos#readme",
   "devDependencies": {
     "chai": "^4.1.2"
-  }
+  },
+  "dependencies": {}
 }
