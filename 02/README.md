@@ -1,6 +1,6 @@
 ### Dojo Panier
 
-Calculer le Prix TTC du Panier (propriété prixTTC de l'Objet Panier) en prenant en compte:
+Calculer le Prix TTC du Panier (propriété prix TTC de l'Objet Panier) en prenant en compte:
 
 * Uniquement les articles français (avec le code "fr")
 * Le prix, la quantité et la possible réduction des produits
