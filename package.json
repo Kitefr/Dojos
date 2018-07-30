@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/Kitefr/Dojos#readme",
   "devDependencies": {
-    "chai": "^4.1.2"
+    "chai": "^4.1.2",
+    "chai-generator": "^2.1.0"
   },
   "dependencies": {}
 }

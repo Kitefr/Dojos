@@ -1,8 +1,10 @@
-function freddy(text) {
-  return text
+function fatFingers(str) {
+  return str
     .split(/a/i)
-    .map((elt, index) => (index % 2 === 0 ? elt : elt.toUpperCase()))
+    .map(
+      (elt, index) => (index % 2 === 0 ? elt.toLowerCase() : elt.toUpperCase())
+    )
     .join("");
 }
 
-module.exports = freddy;
+module.exports = fatFingers;
